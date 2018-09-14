@@ -1,0 +1,278 @@
+
+/*-------------------------HEADER PART CSS STARTS---------------------*/
+
+.container-checkout-header{
+  justify-content: center;
+  margin: auto 0;
+  vertical-align: middle;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 1109px 0 0px;
+  border-bottom: none;
+}
+
+.checkout-header{
+  will-change: transform;
+  width: 100%;
+  height: 56px;
+  z-index: 10;
+  background-color: #2874f0;
+  position: fixed;
+  top: 0;
+}
+
+.content-checkout-header{
+  justify-content: center;
+  margin: auto 0;
+  vertical-align: middle;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0 70px;
+  margin: 0 800px 0px 0px;
+}
+
+.checkout-header-flipkart{
+  padding: 10px 0 0 0;
+}
+
+.checkout-header-explore{
+  padding-top: 0px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  font-style: italic;
+}
+
+.checkout-header-explore-hover{
+  color:#fff;
+}
+
+.checkout-header-plus{
+  color: #eded4a;
+}
+
+/*-------------------------HEADER PART CSS ENDS ---------------------*/
+/*---------------------------FORM LEFT-SIDE----------------*/
+
+.image-side-form{
+  /*padding: 20px 0px 0px 0px;*/
+  /*margin-bottom: 50px;*/
+ /* margin-bottom: 50px;*/
+    width: 569px;
+/*  margin-top: 50px;*/
+}
+
+.side-image{
+  background-image: url(//img1a.flixcart.com/www/linchpin/fk-cp-zion/img/login_img_dec4bf.png);
+  background-position: center 85%;
+  background-repeat: no-repeat;
+}
+
+.form.col-12.col-md-4.side-image{
+  background-color: #2874f0;
+  color: #fff;
+  padding: 40px 35px;
+  font-size: 15px;
+ /* margin: 0px 25px 0px 0px;*/
+  height: 500px;
+  max-width: 250px;
+}
+
+.side-image-content{
+  color: white;
+  font-size: 29px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  font-family: sans-serif;
+}
+
+.side-image-paragraph{
+  font-size: 21px;
+  margin-top: 14px;
+  line-height: 150%;
+  font-weight: 400;
+
+}
+
+.same-properties-input{
+  width: 80%;
+}
+
+.same-properties-right-side-label{
+  display: flex;
+}
+
+.right-side-div{
+  padding-bottom: 10px;
+}
+
+#right-side-login-button{
+  width: 80%;
+  background-color: #f9600e;
+  margin-bottom: 20px;
+  height: 49px;
+}
+
+#new-user{
+  width: 80%;
+  /* background-color: white; */
+  box-shadow: 0 6px 6px -6px black;
+  border: none;
+  height: 30px;
+}
+
+.href-new-user{
+  font-size: 14px;
+  font-weight: 500;
+  color: #2874f0;
+  border: none;
+}
+
+a.href-new-user{
+  /*outline: none;*/
+  border:none;
+}
+
+.image-side-same{
+  /* width:80%;*/
+  /*margin-bottom: 20px;*/
+  margin-top: 20px;
+}
+
+.bottom-portion{
+  clear: both;
+  padding: 50px 0px 0px 0px;
+  margin-right: 17px;
+  margin-top: 150px;
+  position: absolute;
+}
+
+.bottom-portion-span{
+  color: grey;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.bottom-portion-click-here-div{
+  display: inline-block;
+}
+
+.bottom-portion-click-here-span{
+  font-size: 13px;
+  font-weight: 400;
+  color: #212121;
+  cursor: pointer;
+}
+
+.login-botton-span{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.right-side-forget{
+  left: 300px;
+  position: absolute;
+  top: 95px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #0679ff; 
+  font-weight: 600;
+}
+
+.image-side-same a{
+  text-decoration: none;
+  color: #0679ff; 
+}
+
+.right-side-both-botton a{
+  text-decoration: none;
+  color: #2874f0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.effect-1-Email-mobile-password-same{
+  width: 80%;
+  border: none;
+  height: 30px;
+  outline: none;
+  /*box-shadow: 2px solid gery;*/
+  /* shape-outside: unset; */
+  /* box-shadow: seagreen;*/
+  box-shadow: 0 6px 6px -6px black;
+}
+
+#form-color{
+  background-color: #fdf9f9;
+  box-shadow: 0 35px 89px #777;
+}
+
+.same-properties-right-side-label{
+  font-size: 13px;
+  font-weight: 550;
+ /* margin-bottom: -17px;*/
+  color: #7e7979;
+}
+
+.login-form{
+  margin-top: 5px;
+}
+
+#cross-symbol{
+  margin: 0 0 0 414px;
+  border: none;
+  /* background-color: red; */
+  /*background-color: white;*/
+  background-color: #fdf9f9;
+  color: #f11a1a;
+  font-size: 20px;
+  /* font-weight: 500; */
+}
+
+.forgot{
+  margin: 6px 0px 0px 200px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2874f0;
+    
+}
+
+.forgot-label{
+  cursor: pointer;
+}
+
+/*--------------------- MODAL-CSS STARTS -------------------------*/
+.modal-image-side-form{
+  width: 670px;
+}
+
+#modal-input-sign-up{
+  width: 100%;
+}
+
+#modal-input-password{
+  width: 100%;
+}
+
+#modal-input-mobile{
+  width: 100%;
+}
+
+#modal-input-login{
+  width: 100%;
+}
+
+#Modal-cross-button{
+  margin: -25px -725px 0px 0px;
+ /* padding-bottom: -58px;*/
+  padding-top: 21px;
+  /* padding: 0 83px 56px 13px; */
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/*--------------------- MODAL-CSS ENDS -------------------------*/

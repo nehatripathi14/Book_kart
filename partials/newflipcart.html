@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<title>Flipkart add to kart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="flipkart.css">
+</head>  -->
+<body class="header" ">
+	<div class="container" ng-if = "kart.length">
+		<div class="row">
+			<div class="col-12 col-md-7 second">
+				<div class="first">
+					<span class="myCart"><b>MY CART({{kart.length}})</b></span>
+					<div class="insidethemycart">
+						<div class="insidemyCart">
+							<svg width="12" height="12" class="myCartSvg" viewBox="0 0 9 12" xmlns="http://www.w3.org/2000/svg">
+								<path fill="#2874f0" d="M4.2 5.7c-.828 0-1.5-.672-1.5-1.5 0-.398.158-.78.44-1.06.28-.282.662-.44 1.06-.44.828 0 1.5.672 1.5 1.5 0 .398-.158.78-.44 1.06-.28.282-.662.44-1.06.44zm0-5.7C1.88 0 0 1.88 0 4.2 0 7.35 4.2 12 4.2 12s4.2-4.65 4.2-7.8C8.4 1.88 6.52 0 4.2 0z" fill-rule="evenodd"></path>
+							</svg>
+							<form autocomplete="off" name="personForm">
+								<input class="myCartInput" 
+								type="text" 
+								placeholder="Enter Delivery Pincode" 
+								tabindex="1" 
+								maxlength="6" 
+								ng-pattern ="/^[0-9]{1,6}$/" 
+								name="pincode"
+							 	ng-model="txtpin">
+								<span style="color:Red" ng-show="personForm.pincode.$dirty&&personForm.pincode.$error.pattern">Only 6 digit numbers is allowed</span><br/> 
+							</form>
+							<div class="myCartCheck">
+								<span>check</span>
+							</div>
+						</div>
+					</div>
+			  </div>
+			  <div id="bookListWrapper">
+			    	<!-- kart:{{kart}} -->
+		    	<div>
+						<ul class="list-unstyled">
+							<li class="book" ng-repeat="book in kart track by $index" style="background: white url('public/imgs/{{book.imgUrl}}') no-repeat">
+		            <div class="book-details clearfix">
+									<h3>{{book.name}}</h3>
+									<p>{{book.price | currency:'Rs.'}}</p>
+									<ul class="list-unstyled list-inline">
+										<li>Rating: {{book.rating}}</li>
+										<li>Binding: {{book.binding | uppercase}}</li>
+										<li>Publisher: {{book.publisher}}</li>
+										<li>Released: {{book.releaseDate}}</li>
+									</ul>
+										<p>{{book.details}}</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="fixed">
+					<button class="btn btn-default pull-right" type="submit" id="continue">
+						<span class="fa fa-chevron-left"></span>
+						<span><a id="hover-ContinueShopping" href="/#books">CONTINUE SHOPPING</a></span>
+					</button>
+					<button class="btn btn-default pull-right" type="submit"  id="order">
+						<span class="place"><a href="#/placeorder">PLACE ORDER</a></span>
+					</button>
+        </div>
+			</div>
+			<div class="col-12 col-md-4 section ">
+				<div class="sidebox">
+		   		<h6>PRICE DETAILS</h6><hr>
+					<div class="row" id="row">
+						<div class="col-sm-8">
+					    <p class="priceDetails">Price</p>
+						</div>
+				    <div class="col-sm-4">
+				    	<span>$444</span>
+				    </div>
+				    <div class="col-sm-8">
+				    	<p class="priceDetails">Delivery Charge</p>
+				    </div>
+				    <div class="col-sm-4 delivery">
+				    	<span>FREE</span>
+				    </div>
+				    <div class="col-sm-8">
+				    	<p>Amount Payable</p>
+				    </div>
+				    <div class="col-sm-4">
+				    	<span>$1234</span>
+				    </div>
+		    	</div>
+					<div class="col-md-12 para">
+				   	<p class="paragraph">Your total savings on this order is $50.</p>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<img src="//img1a.flixcart.com/www/linchpin/fk-cp-zion/img/shield_a7ea6b.png" class="flipkart">
+			    <span class="slide2">Safe and Secure Payments. Easy returns. 100% Authentic products.</span>
+				</div>
+	    </div>
+		</div>
+	</div>
+</body>
+
+<!-------------------------------WHEN CART IS EMPTY START-------------------- -->
+<div ng-if="!kart.length" class="ContainerCheckoutMyCart">
+	<div class="checkoutMyCart">
+		<span class="myCart">MY CART({{kart.length}})</span>
+  </div>
+	<div class="checkoutMyCart-Image">
+		<img style="-webkit-user-select: none;cursor: ;" src="https://img1a.flixcart.com/www/linchpin/fk-cp-zion/img/empty-cart_ee6141.png" width="200" height="200">
+	</div>
+	<div class="checkoutMyCart-Text">
+		<span>Your Shopping Cart is Empty </span>
+	</div>
+</div>
+<!-------------------------------WHEN CART IS EMPTY END--------------------

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h3><mark>Thanks for shopping in our store.</mark></h3>
+		<p>This is your shopping cart, here you can edit the item according to your need ,go to the cart and and along with that you can clear your cart.</p>
+		<div class="col-md-6">
+			<table ng-if="Kart.length != 0" class="table table-bordered" style="width:70% margin-top:0 0 5px 0px">
+				<thead class="thead-dark">
+					<tr>
+						<th>Book</th>
+						<th>Quantity</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tfoot class="text-light bg-dark">
+					<tr>
+						<td colspan="2" style="text-align:center">TOTAL</td>
+						<td>${{ total }}</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr ng-repeat="book in kart track by $index">
+						<td><img ng-src="public/imgs/{{book.imgUrl}}" class="img-responsive" style="width:100%!important"></td>
+						<td>
+							<div id="input_div">
+	  						<input type="button" value="-" id="minus" ng-click="remove($index,book)">
+	  						<input type="text" size="25" value="1" id="count" >
+	  						<span>{{book.qty}}</span>
+	  						<input type="button" value="+" id="plus" ng-click="add(book)">
+					    </div>
+						</td>
+						<td>${{book.price}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6">
+			<button type="button" id="button" class="btn btn-default"><a href="#/books"><h3><b>CONTINUE SHOPPING</b></h3></a></button>
+		</div>
+	</div>
+</body>
+</html>

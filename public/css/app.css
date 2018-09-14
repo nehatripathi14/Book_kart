@@ -1,0 +1,314 @@
+#headerWrapper {
+    width: 100%;
+	height: 80px;
+    background-color: #ffff;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: #007bff;
+}
+
+#wrapper-garbar{
+    position: fixed;
+    margin: 15px 0px 0px 270px;
+}
+
+body{
+    background-color: #e7e7e7;
+}
+
+.hover a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    padding: 10px;
+    margin-right: 10x;
+    font-size: 35px;
+    font-family: fantasy;
+}
+
+.tagline {
+    font-size: 10px;
+    margin-top: 50px;
+    margin-left: -123px;
+    font-family: monospace;
+}
+
+.nav-wrapper {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#bookListWrapper {
+	width: 100%;
+	padding: 10px;
+}
+
+#bookListWrapper input {
+	width: 25%;
+}
+
+#bookListWrapper .book {
+	border: 1px solid gray;
+	padding: 10px;
+	margin-bottom: 10px;	
+	position: relative;
+}
+
+.pull-right {
+    margin: 0 0 0 6px;
+}
+
+#bookListWrapper .book .book-details {
+	margin-left: 130px;
+}
+
+.container.ng-enter {
+	-webkit-transition:0.5s linear all;
+	-moz-transition:0.5s linear all;
+	-o-transition:0.5s linear all;
+	transition:0.5s linear all;
+	opacity:0;
+}
+
+.container.ng-enter-active {
+	opacity:1;
+}
+
+.book.ng-leave {
+	-webkit-transition:0.5s linear all;
+	-moz-transition:0.5s linear all;
+	-o-transition:0.5s linear all;
+	transition:0.5s linear all;
+	opacity:1;
+	left: 0;
+}
+
+.book.ng-leave-active {
+	opacity:0;
+	left: 600px;
+}
+
+.book.ng-enter {
+	-webkit-transition:0.5s linear all;
+	-moz-transition:0.5s linear all;
+	-o-transition:0.5s linear all;
+	transition:0.5s linear all;
+	opacity:0;
+	left: 600px;
+}
+
+.book.ng-enter-active {
+	opacity:1;
+	left: 0;
+}
+
+/*.nav-pills>li>a{
+    color: #fff;
+    background-color: #60adff;
+}*/
+
+.header-buttons{
+    background-color: #f1e9e9;
+    color: #554f4f;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#header-buttons{
+    background-color: #f1e9e9;
+    color: #554f4f;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#header-button{
+    background-color: #f1e9e9;
+    color: #554f4f;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#header-buy-button{
+    color: #554f4f;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#header-buy-buttons{
+    background-color: #f1e9e9;
+    color: #554f4f;
+    /* font-size: 20px; */
+    /* font-weight: 700; */
+    width: 67px;
+    border-radius: 4px;
+}
+
+#Sign-up-header{
+    padding: 0px 0px 0px 660px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 550;
+    color: #fff;
+    margin-top: 10px;
+    background-color: #007bff;
+    /* border: none; */
+    outline: none;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    /* font-family: Roboto, Arial, sans-serif; */
+}
+
+/*------------------------------ ROUGH AREA START ---------------------------------
+#table{
+	width:70%;
+	margin-top:0 0 5px 0px !important;
+}
+th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.pull-right{
+	border: 0px !important;
+	width: 100%;
+	margin-top: 50px;
+}
+#button{
+	margin: 0 0 5px 0px;
+}
+#google-btn{
+	margin: 5px;
+}
+------------------------------ ROUGH AREA ENDS ---------------------------------*/
+/*----------------------------- FOOTER CSS STARTS -------------------------------*/
+/*------------- Returns-Policy ---------------*/
+/*h4{
+    text-align: center;
+    margin-top: 40px;
+}
+.returnParagraph{
+    font-size: 14px;
+}
+.part{
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.link{
+    color:inherit;
+    font-weight: 500;
+    font-size: 14px;
+}
+<----------------TABLE 1 START----------------->
+table{
+    padding: 8px;
+    border: 1;
+
+}
+table,tbody,tr,td,th{
+    border:1px solid #000;
+}
+.t1-everyContent{
+    padding: 10px 40px 0px 40px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.same{
+    line-height: 1.5;
+    margin-top: 15px;
+    font-size: 14px;
+    margin: 10px 27px 0px 8px;
+    padding-bottom: 10px;
+}
+--------------TABLE 1 ENDS----------
+.returnPolicy{
+    background-color: #f9f5f5;
+}
+.color{
+    background-color: #fff;
+}
+.pageFooter{
+    padding-bottom: 40px;
+}
+.line{
+    border-top: 1px solid grey;
+}
+.part2{
+    margin: 15px 0px 0px 0px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.t2-para1{
+    margin: 15px 0 0 0px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.t2-para2{
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.same2{
+    margin: 25px 0px 0px 5px;
+    font-size: 14px;
+    padding-right: 16px;
+}
+.same3{
+    margin: 0px 0px 12px 5px;
+    font-size: 14px;
+}
+.same4{
+    margin:15px;
+    font-size: 14px;
+}
+.t2-heading{
+    padding: 20px 0px 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.table2-Footer{
+    padding: 20px 0 0 90px;
+}
+.t2-foot{
+   background-color: #252020;
+}
+.t2-head{
+    color: #898282;
+    font-size: 14px;
+    font-weight: 500; 
+    padding: 0 0 8px 0px
+}
+.t2-href{
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+}
+.lastSection{
+    padding: 49px 330px 0px 100px;
+    padding-bottom: 30px;
+}
+.t2-sidefooter{
+    padding: 20px 0px 0px 0px;
+}
+.t2-paragraphFooter{
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+}
+.symbol{
+    color: #ffef14;
+    font-size: 18px;
+}
+.image{
+    height: 16px;
+    width: 17px;
+}
+.defect{
+    padding: 0 0 0 15px;
+}
+a:hover {
+    color: white;
+}*/
+/*----------------------------- FOOTER CSS ENDS -------------------------------*/

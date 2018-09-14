@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to BooKart</title>
+    <!-------------------------------- LIBRARIES SECTION START--------------------------------> 
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-messages.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-------------------------------- LIBRARIES SECTION ENDS -------------------------------->
+    <!-------------------------------- CSS + SCRIPT SECTION START ----------------------->
+    <script src="/app.js"></script>
+    <link rel="stylesheet" href="/css/app.css"> <!--(BOOK+KART CSS)-->
+    <link rel="stylesheet" href="/css/flipkart.css"> <!-- (NEW CSS) -->
+    <link rel="stylesheet" href="/css/login-page.css"> <!-- (new-header+login+modals) -->
+
+    <!---------------------------------- CSS + SCRIPT SECTION ENDS ----------------------->
+    <!------------------------------- CONTROLLERS SECTION START ----------------------------->
+    <script src="/controllers/header.js"></script>
+    <script src="/controllers/book-list-controller.js"></script>
+    <script src="/controllers/Kart-list-controller.js"></script>
+    <!--<script src="public/js/controllers/purchase-list-controller.js"></script>-->
+    <script src="/controllers/new-flipcart-controller.js"></script>
+    <script src="/controllers/return-policy-controller.js"></script>
+    <script src="/controllers/login-page-controller.js"></script>
+    
+
+    <!---------------------------------  CONTROLLERS SECTION ENDS ---------------------------->
+    <!--------------------------------- SERVICE SECTION START ---------------------------------->
+    <script src="/service/service.js"></script>
+    <!--------------------------------- SERVICE SECTION ENDS -------------------------------->
+  </head>
+  <body style="margin-top: 90px">
+
+    <!------------------------------------- HEADER SECTION START ------------------------------->
+    <!------------------------------------- MAIN-HEADER START ------------------------------->
+
+    <div id="headerWrapper" ng-cloak ng-controller="HeaderCtrl" ng-if = "headerType === 'main-header'">
+      <span class="logo pull-left">{{appDetails.title}}</span>
+      <span class="tagline pull-left">{{appDetails.tagline}}</span>
+      <div class="nav-wrapper pull-left" id="wrapper-garbar">
+        <div class="hover">
+          <ul class="nav nav-pills">
+            <li class="active"><a id="header-buttons" href="#/books">Books</a></li>
+            <li><a class="header-buttons" id="header-button" href="#/kart">Closet</a></li>
+            <button class="btn btn-info pull-right" id="header-buy-buttons"><a id="header-buy-button" href="#/Buy">Buy</a></button>
+            <li class="Sign-up-header-list"><a id="Sign-up-header" href="/partials/modals.html" data-toggle="modal" data-target="#theModal"> Login & Sign-up </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!------------------------------------ MODAL-START ------------------------------>
+    
+    <div id="theModal" class="modal fade text-center">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        </div>
+      </div>
+    </div>
+
+    <!---------------------------------------- MODAL-START ------------------------------>
+    <!------------------------------------- MAIN-HEADER ENDS------------------------------->
+    <!------------------------------------- CHECKOUT-HEADER START ------------------------->
+
+    <header class="checkout-header" ng-if = "headerType === 'checkout-header'">
+      <div class="container-checkout-header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-9 checkout-header">
+              <div class="content-checkout-header">
+                <a href="/">
+                  <img width="75" src="//img1a.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_4ee2f9.png" alt="Flipkart" title="Flipkart" class= "checkout-header-flipkart">
+                </a>
+                <a href="/vip" class= "checkout-header-explore" id="checkout-header-explore-hover">Explore
+                  <span class="checkout-header-plus">Plus</span>
+                  <img width="10" src="//img1a.flixcart.com/www/linchpin/fk-cp-zion/img/plus_b13a8b.png" class="checkout-header-plus-image">
+                </a>
+              </div>
+              <!-- <h1>neha</h1> -->
+            </div>
+            <div class="col-12 col-md-3">
+              <h1><b>neha</b></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!------------------------------------- CHECKOUT-HEADER ENDS ------------------------------->
+    <!------------------------------------- HEADER SECTION ENDS ------------------------------->
+
+    <!------------------------------------- CONTAINER SECTION START ------------------------------->
+
+    <div ng-view class="container"></div>
+    <!------------------------------------- CONTAINER SECTION ENDS ------------------------------->
+    <!------------------------------------ FOOTER SECTION STARTS ------------------------------>
+
+    <ng-include src="'partials/footer-list.html'"></ng-include>
+    <!----------------------------- FOOTER  SECTION ENDS -------------------------------->
+	</body>
+</html>

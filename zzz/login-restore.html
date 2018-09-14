@@ -1,0 +1,67 @@
+<!------------------------------- SECTION STARTS ------------------------------>
+<!------------------------------- IMAGE SIDE STARTS ---------------------------->
+	<div class="image-side-form">
+		<div class="row" id="form-color">
+			<div class="form col-12 col-md-4 side-image">
+				<div>
+					<div class="side-image-content">
+						<span>LOGIN</span>
+					</div>
+					<div class="side-image-paragraph">
+						<P>Get access to your orders, Wishlist and recommdation.</P>
+					</div>
+				</div>
+			</div>
+<!---------------------- IMAGE SIDE ENDS HERE ---------------------------->
+			<!-- <div class="col-12 col-md-6">
+				<form class="login-form" name="frm" method="post"
+        		novalidate autocomplete="off">
+					<div class="right-side-div">
+						<div class="image-side-same">
+							<label class="same-properties-right-side-label">Email-id/ Mobile Number:</label></br>
+							<input type="text" name="Email-id/Mobile-number" placeholder="" class="effect-1-Email-mobile-password-same">
+						</div> -->
+<!-- ----------------------------------------------------------------------------------- -->
+						<!-- user.password: {{user.password}} --> <!--  (String Interpolation in html) -->
+						<div class="image-side-same">
+							<label class="same-properties-right-side-label">Password:</label></br>
+							<input type="password" 
+							name="password" 
+							class="effect-1-Email-mobile-password-same"
+							ng-model="user.password" 
+						  required
+							minlength="6"
+							maxlength="7">
+							<div style="color:Red" class="field-message" ng-messages="frm.password.$error" ng-if='frm.password.$dirty' ng-cloak>
+                <div ng-message="required">Password is required</div>
+                <div ng-message="minlength">Password must have minimum 6 characters</div>
+                <div ng-message="maxlength">Password must have maximum 10 characters</div>
+              </div>
+              <!-- <div style="color:Red" ng-show="frm.password.$touched||frm.password.$error.pattern">Enter valid password</div><br/>  -->
+							<div class="forgot">
+								<label class="forgot-label">Forgot?</label>
+							</div>
+					
+	<!-- ----------------------------------------------------------------------------------- -->
+						<div>
+			   		<div class="right-side-both-botton">
+				   		<button class="btn btn-default pull-left" id="right-side-login-button" >
+				   			<span class="login-botton-span"
+                   ng-disabled="frm.$invalid || !conditions">Login</span>
+				   		</button>
+				   		<button class="btn btn-default pull-left" id="new-user">
+				   			<a href="Sign-up" class="href-new-user">New to Bookcart? Sign-up</a>
+				   		</button>
+				   	</div>
+				   	</div>
+				   	<div class="bottom-portion">
+				   		<span class="bottom-portion-span">We no longer support login via Social accounts. To recover your old accounts please</span>
+				   		<div class="bottom-portion-click-here-div">
+				   			<span class="bottom-portion-click-here-span">Click here</span>
+				   		</div>
+				  	</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</body>

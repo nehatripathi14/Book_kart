@@ -1,0 +1,97 @@
+<!-- -----------------------------------Image side starts ---------------------------- -->
+<div class="image-side-form">
+	<div class="row" id="form-color">
+		<div class="form col-12 col-md-4 side-image">
+			<div>
+				<div class="side-image-content">
+					<span>LOGIN</span>
+				</div>
+				<div class="side-image-paragraph">
+					<P>Get access to your orders, Wishlist and recommdation.</P>
+				</div>
+			</div>
+		</div>
+	<!-- _______________email/mobile-number validation starts______________ -->
+		<div class="col-12 col-md-8">
+			<form class="login-form" name="loginForm" novalidate autocomplete ng-submit="loginForm.$valid && submit(userData)">
+				<div class="right-side-div">
+					<div class="image-side-same">
+						<label class="label-control text-muted">
+							Email / Mobile Number:
+						</label>
+						<input
+							type="text"
+							name="emailphone"
+							placeholder=""
+							class="effect-1-Email-mobile-password-same"
+							ng-model="userData.user"
+							id="emailphone"
+							ng-pattern="/^(?:\d{10}|\w+@\w+\.\w{2,3})$/"
+							ng-required="true"
+							/>
+							<div class="error-validation" ng-messages="loginForm.emailphone.$error" ng-if="loginForm.emailphone.$touched">
+								<!-- <div ng-show="submitted==true && loginForm.$invalid"> -->
+									<p class="help-block text-danger" ng-message="required">
+										Email/Mobile-Number is required
+									</p>
+									<p class="help-block text-danger" ng-message="pattern">Enter either 10 digit mobile number or valid email. </p>
+								<!-- </div> -->
+							</div>
+					</div>
+
+	<!-- _______________email/mobile-number validation starts______________ -->
+	<!-- _____________________Password validation starts___________________ -->
+					<div class="image-side-same">
+						<label class="label-control text-muted">
+						<!-- <label class="same-properties-right-side-label"> -->
+							Password:
+						</label>
+						<input
+							type="password" 
+							name="password" 
+							class="effect-1-Email-mobile-password-same"
+							ng-model="password"
+							ng-required="true"
+							ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/"
+							></br>
+							<div class="error-validation" ng-messages="loginForm.password.$error" ng-if="loginForm.password.$touched">
+								<p class="help-block text-danger" ng-message="required">
+									Password is required.
+								</p>
+								<p class="help-block text-danger" ng-message="pattern">
+									Password should be atleast 8 characters long and should contain one number,one character and one special
+									characters.
+								</p>
+							</div>
+						<!-- Without Using ng-message, ng-pattern
+						<span ng-show="loginForm.password.$touched">
+							<span ng-show="loginForm.password.$error.required"><br />Password is required.</span>
+							<span ng-show="loginForm.password.$error.minlength"><br />Password must have 6 Characters.</span>
+							<span ng-show="loginForm.password.$error.maxlength"><br />Password cannot be more then 8 Characters.</span>
+							<span ng-show="loginForm.password.$valid.minlength.maxlength"><br/>dddd</span>
+						</span> -->
+					</div>
+	<!-- _________________________ password validation ends______________________ -->
+					<div class="forgot">
+						<label class="forgot-label">Forgot?</label>
+					</div>
+					<div class="right-side-both-botton">
+						<button class="btn btn-default pull-left" id="right-side-login-button" ng-disabled="loginForm.$invalid">
+							<span class="login-botton-span" ng-click="submitted = true">Login</span>
+						</button>
+						<button class="btn btn-default pull-left" id="new-user">
+							<a href="Sign-up" class="href-new-user">New to Bookcart? Sign-up</a>
+						</button>
+					</div>
+					<div class="bottom-portion">
+						<span class="bottom-portion-span">We no longer support login via Social accounts. To recover your old accounts please</span>
+						<div class="bottom-portion-click-here-div">
+							<span class="bottom-portion-click-here-span">Click here</span>
+						</div>
+					</div>
+				</div>
+			</form>		
+		</div>
+	</div>
+</div>
+
